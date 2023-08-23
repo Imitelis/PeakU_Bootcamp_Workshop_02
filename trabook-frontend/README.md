@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# PeakU Bootcamp - Workshop 02 - Trabook - Front-end
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

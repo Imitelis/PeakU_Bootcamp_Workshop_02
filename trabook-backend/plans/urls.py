@@ -7,7 +7,7 @@ from plans import views
 
 # Api versioning
 router = routers.DefaultRouter()
-router.register(r'plans', views.PlanView, 'plans')
+router.register(r'plans', views.PlanView, basename='plan')
 
 urlpatterns = [
     path("api/", include(router.urls)),
