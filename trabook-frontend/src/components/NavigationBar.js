@@ -1,4 +1,3 @@
-// import { useState, useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../misc/logo.png";
 

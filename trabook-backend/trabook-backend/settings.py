@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'coreapi',
     'plans',
+    'tours',
 ]
 
 MIDDLEWARE = [

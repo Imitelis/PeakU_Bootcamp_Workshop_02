@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import PlanCard from "./PlanCard";
 
-const Plans = ({ plans }) => {
+const Trips = ({ plans }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredPlans = plans
@@ -64,4 +64,4 @@ const Plans = ({ plans }) => {
   );
 };
 
-export default Plans;
+export default Trips;

@@ -5,8 +5,9 @@ import NavigationBar from "./components/NavigationBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Plans from "./components/Plans";
+import Trips from "./components/Trips";
+import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-
 
 import planService from "./services/plans";
 
@@ -31,8 +32,8 @@ const App = () => {
     <div className="min-h-screen flex flex-col bg-transparent">
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home plans={plans} />} />
+        <Route path="/home" element={<Home plans={plans} />} />
         <Route path="/about" element={<About />} />
         <Route path="/plans" element={<Plans plans={plans} />} />
         <Route path="*" element={<NotFound />} />
@@ -40,9 +41,5 @@ const App = () => {
     </div>
   );
 };
-
-/*
-
-*/
 
 export default App;
