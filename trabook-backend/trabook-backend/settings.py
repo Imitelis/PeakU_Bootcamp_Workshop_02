@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'coreapi',
     'plans',
     'tours',
+    'blogs',
 ]
 
 MIDDLEWARE = [

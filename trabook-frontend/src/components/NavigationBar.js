@@ -1,16 +1,25 @@
 import { useLocation } from "react-router-dom";
 import logo from "../misc/logo.png";
 
-const NavigationBar = () => {
+const NavigationBar = ({ blogs }) => {
   const location = useLocation();
+
+  const blogId = Number(location.pathname.split("/").pop());
+
+  function doesBlogExists(blogId) {
+    return blogs.some((blog) => blog.id === blogId);
+  }
+
   const isHome = location.pathname === "/home" || location.pathname === "/";
   const isAbout = location.pathname === "/about";
   const isPlans = location.pathname === "/plans";
-  const isTrips = location.pathname === "/trips";
-  const isBlog = location.pathname === "/blog";
+  const isTours = location.pathname === "/tours";
+  const isBlog =
+    location.pathname === "/blogs" ||
+    (location.pathname === `/blogs/${blogId}` && doesBlogExists(blogId));
 
   return (
-    <div className="navigation-bar navbar navbar-expand-md navbar-white bg-orange-50 h-20 flex items-center justify-between fixed top-0 z-10 w-full">
+    <div className="navigation-bar navbar navbar-expand-md navbar-white bg-orange-50 h-20 flex items-center justify-between fixed top-0 z-50 w-full">
       <div className="navbar-brand ml-36 w-30 h-auto" id="logo">
         <a href="/">
           <img
@@ -62,11 +71,11 @@ const NavigationBar = () => {
           <li className="nav-item px-2">
             <a
               className={`nav-link text-gray-500 ${
-                isTrips
+                isTours
                   ? "text-orange-500 hover:text-orange-400"
                   : "text-gray-500 hover:text-orange-500"
               }`}
-              href="/trips"
+              href="/tours"
             >
               Tour
             </a>
@@ -78,7 +87,7 @@ const NavigationBar = () => {
                   ? "text-orange-500 hover:text-orange-400"
                   : "text-gray-500 hover:text-orange-500"
               }`}
-              href="/blog"
+              href="/blogs"
             >
               Blog
             </a>

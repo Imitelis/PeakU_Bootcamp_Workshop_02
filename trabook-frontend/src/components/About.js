@@ -3,7 +3,7 @@ import trees_01 from "../misc/trees_01.png";
 const About = () => {
   return (
     <div className="bg-orange-50 z-0 w-full mt-20 min-h-screen">
-      <div className="col-span-2 flex flex-col justify-center pt-16 mb-0 bg-orange-50">
+      <div className="col-span-2 flex flex-col justify-center pb-48 mb-0 bg-orange-50">
         <span className="text-center">
           <p className="text-5xl font-serif font-bold text-black mt-8">
             About <span className="text-orange-500">us</span>
@@ -26,7 +26,7 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="globe-search"
+              className="globe-search"
               width="57"
               height="57"
               viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="plane-inflight"
+              className="plane-inflight"
               width="57"
               height="57"
               viewBox="0 0 24 24"
@@ -54,10 +54,9 @@ const About = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              {" "}
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />{" "}
-              <path d="M15 11.085h5a2 2 0 1 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3l4 7z" />{" "}
-              <path d="M3 21h18" />{" "}
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 11.085h5a2 2 0 1 1 0 4h-15l-3 -6h3l2 2h3l-2 -7h3l4 7z" />
+              <path d="M3 21h18" />
             </svg>
             <h2 className="text-2xl font-semibold pt-4">Your Journey</h2>
             <p className="text-gray-600 pt-2">
@@ -69,7 +68,7 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="person-globe"
+              className="person-globe"
               width="57"
               height="57"
               viewBox="0 0 24 24"
@@ -87,41 +86,40 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="case-person"
+              className="case-person"
               width="57"
               height="57"
               viewBox="0 0 48 48"
               fill="white"
             >
-              {" "}
               <path
                 d="M35 9.5C35 11.433 33.433 13 31.5 13C29.567 13 28 11.433 28 9.5C28 7.567 29.567 6 31.5 6C33.433 6 35 7.567 35 9.5Z"
                 fill="#f97316"
-              />{" "}
+              />
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M31.5 11C32.3284 11 33 10.3284 33 9.5C33 8.67157 32.3284 8 31.5 8C30.6716 8 30 8.67157 30 9.5C30 10.3284 30.6716 11 31.5 11ZM31.5 13C33.433 13 35 11.433 35 9.5C35 7.567 33.433 6 31.5 6C29.567 6 28 7.567 28 9.5C28 11.433 29.567 13 31.5 13Z"
                 fill="#f97316"
-              />{" "}
+              />
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M19 16C17.8954 16 17 16.8954 17 18C17 19.1046 17.8954 20 19 20H26V40C26 41.1046 26.8954 42 28 42C29.1046 42 30 41.1046 30 40V31H33V40C33 41.1046 33.8954 42 35 42C36.1046 42 37 41.1046 37 40V27.917C39.8377 27.441 42 24.973 42 22C42 18.6863 39.3137 16 36 16H19ZM39 22C39 20.8954 38.1046 20 37 20V24C38.1046 24 39 23.1046 39 22Z"
                 fill="#f97316"
-              />{" "}
+              />
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M6 32C6 30.8954 6.89543 30 8 30H21C22.1046 30 23 30.8954 23 32V40C23 41.1046 22.1046 42 21 42H8C6.89543 42 6 41.1046 6 40V32ZM10 39V33H12V39H10ZM17 33V39H19V33H17Z"
                 fill="#f97316"
-              />{" "}
+              />
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
                 d="M11 28C11 26.8954 11.8954 26 13 26H16C17.1046 26 18 26.8954 18 28V30H16V28H13V30H11V28Z"
                 fill="#f97316"
-              />{" "}
+              />
             </svg>
             <h2 className="text-2xl font-semibold pt-4">Planned</h2>
             <p className="text-gray-600 pt-2">
@@ -133,7 +131,7 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="plant"
+              className="plant"
               width="57"
               height="57"
               version="1.1"
@@ -144,9 +142,8 @@ const About = () => {
               strokeLinejoin="round"
               strokeWidth="1.5"
             >
-              {" "}
-              <path d="m8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5-4.5-1-4.5-1 0 2 1.5 3.5 4 1 4 1zm.5-1s-.75-2 1-3.5 4.5-1 4.5-1 0 2-1.5 3.5-4 1-4 1z" />{" "}
-              <path d="m4.75 9.75h6.5s.5 4.5-3.25 4.5-3.25-4.5-3.25-4.5z" />{" "}
+              <path d="m8.75 6.75c0 1.25-.75 3-.75 3m.25-2.5s.75-2-1-3.5-4.5-1-4.5-1 0 2 1.5 3.5 4 1 4 1zm.5-1s-.75-2 1-3.5 4.5-1 4.5-1 0 2-1.5 3.5-4 1-4 1z" />
+              <path d="m4.75 9.75h6.5s.5 4.5-3.25 4.5-3.25-4.5-3.25-4.5z" />
             </svg>
             <h2 className="text-2xl font-semibold pt-4">Sustainable</h2>
             <p className="text-gray-600 pt-2">
@@ -158,7 +155,7 @@ const About = () => {
           <div className="bg-white shadow-md p-4 rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="case"
+              className="case"
               width="57"
               height="57"
               viewBox="0 0 20 20"

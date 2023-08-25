@@ -9,6 +9,6 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #ccc;
+  background-color: #fff7ed;
   z-index: -2;
 }

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-import PlanCard from "./PlanCard";
+import BlogCard from "./BlogCard";
 
-const Plans = ({ plans }) => {
+const Blogs = ({ blogs }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredPlans = plans
-    .filter((plan) =>
-      plan.city.toLowerCase().includes(searchTerm.toLowerCase()),
+  const filteredBlogs = blogs
+    .filter((blog) =>
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase()),
     )
-    .sort((a, b) => b.rated - a.rated);
+    .sort((a, b) => b.published_date - a.published_date);
 
   return (
     <div className="bg-orange-50 z-0 w-full mt-20 pb-48 min-h-screen">
@@ -17,11 +17,10 @@ const Plans = ({ plans }) => {
         <div className="col-span-2 flex flex-col justify-center pt-0 pb-16">
           <span className="text-center">
             <p className="text-5xl font-serif font-bold text-black mt-8">
-              <span className="text-orange-500">Plan</span> your destination
+              Check our <span className="text-orange-500">blog</span>
             </p>
             <p className="text-lg text-gray-500 mt-4 mb-4">
-              Embark on your thrilling adventure with us by planning your
-              destination.
+              Immerse yourself as you navigate through the pages of this blog.
             </p>
           </span>
 
@@ -38,20 +37,20 @@ const Plans = ({ plans }) => {
             </svg>
             <input
               type="text"
-              placeholder="Search by city"
+              placeholder="Search by title"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="h-10 w-50 ml-2 border rounded-md p-3 mb-4"
             />
           </div>
 
-          <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-8 px-36 my-4">
-            {filteredPlans.map((plan) => (
-              <PlanCard key={plan.id} plan={plan} />
+          <div className="grid 2xl:grid-cols-3 lg:grid-cols-1 gap-8 px-48 my-4">
+            {filteredBlogs.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
             ))}
           </div>
 
-          {filteredPlans.length === 0 ? (
+          {filteredBlogs.length === 0 ? (
             <div className="flex justify-center text-gray-500 text-lg px-36 w-100">
               None found.
             </div>
@@ -64,4 +63,4 @@ const Plans = ({ plans }) => {
   );
 };
 
-export default Plans;
+export default Blogs;
