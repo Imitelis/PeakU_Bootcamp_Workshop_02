@@ -1,6 +1,6 @@
 const BlogCard = ({ blog }) => {
   return (
-    <div className="bg-none hover:bg-white h-120 rounded-lg shadow-md overflow-hidden z-0 w-80 group">
+    <div className="bg-none hover:bg-white h-90 rounded-lg shadow-md overflow-hidden z-0 w-70 group">
       <div className="relative overflow-hidden flex items-center justify-center flex-col w-100 h-90 rounded-lg">
         <div className="w-100 h-80">
           <div

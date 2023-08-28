@@ -45,7 +45,7 @@ const Tours = ({ tours }) => {
             />
           </div>
 
-          <div className="grid 2xl:grid-cols-3 lg:grid-cols-1 gap-8 px-48 my-4">
+          <div className="grid 2xl:grid-cols-3 lg:grid-cols-2 gap-8 px-48 my-4">
             {filteredTours.map((tour) => (
               <TourCard key={tour.id} tour={tour} />
             ))}

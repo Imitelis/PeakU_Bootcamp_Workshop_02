@@ -2,13 +2,23 @@
 
 ## Initialize project
 
-In the project directory, you can run:
+Create a virtual environment for the backend:
 
 ```
-source env/bin/activate
+python3 -m venv venv
 ```
 
-to activate Python 3 virtual environment.
+Activate it, by running:
+
+```
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```
+pip install -r reqs.txt
+```
 
 Then:
 
@@ -45,3 +55,4 @@ npm run start
 to run the client.
 
 Note: Server is configured to run at port 8000 and client to run at port 3000. If you change this configuration, you might alter the functioning of the application. This would require you to configure the cors in the backend and the proxy in the frontend.
+

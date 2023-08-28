@@ -7,7 +7,7 @@ import About from "./components/About";
 import Plans from "./components/Plans";
 import Tours from "./components/Tours";
 import Blogs from "./components/Blogs";
-import BlogView from "./components/BlogView";
+import Blog from "./components/Blog";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
 
@@ -54,7 +54,7 @@ const App = () => {
         <Route path="/plans" element={<Plans plans={plans} />} />
         <Route path="/tours" element={<Tours tours={tours} />} />
         <Route path="/blogs" element={<Blogs blogs={blogs} />} />
-        <Route path="/blogs/:id" element={<BlogView blogInfo={blogInfo} />} />
+        <Route path="/blogs/:id" element={<Blog blogInfo={blogInfo} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

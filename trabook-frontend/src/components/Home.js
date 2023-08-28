@@ -62,7 +62,7 @@ const Home = ({ plans, tours, blogs }) => {
       quote:
         "Thanks to this travel agency, my visit to Bilbao was seamless. The agency's attention to detail, from arranging museum tickets to suggesting local eateries, made my exploration of the Guggenheim's architectural marvel.",
       name: "Olivia Tremblay",
-      location: "Calgary, Canaday",
+      location: "Calgary, Canada",
     },
     {
       picture:
@@ -105,7 +105,7 @@ const Home = ({ plans, tours, blogs }) => {
           <div className="col-span-1 pl-48 pr-20 justify-center items-center">
             <p className="text-6xl font-bold text-black font-serif mt-20">
               Get started your exciting
-              <span className="text-orange-500">journey</span> with us.
+              <span className="text-orange-500"> journey</span> with us.
             </p>
             <p className="text-lg mt-10 text-gray-500">
               A Team of experienced tourism professionals will provide you with
@@ -321,7 +321,7 @@ const Home = ({ plans, tours, blogs }) => {
           />
         </span>
 
-        <div className="flex justify-between w-20 gap-3 relative mb-0 top-[-5rem] left-[78rem]">
+        <div className="flex justify-between w-20 gap-3 relative mb-0 top-[-5rem] 2xl:left-[78rem] lg:left-[58rem]">
           <button
             className="text-md px-2 py-2 text-gray-400 border-2 border-gray-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 shadow-md rounded-full"
             onClick={handleLeftTours}
@@ -458,7 +458,7 @@ const Home = ({ plans, tours, blogs }) => {
             src={planes_02}
             alt="planes_02"
             title="Planes"
-            className="relative inline-block mb-0 top-[-8rem] left-[27rem]"
+            className="relative inline-block mb-0 top-[-8rem] 2xl:left-[27rem] lg:left-[22rem]"
           />
         </div>
       </div>
@@ -470,7 +470,7 @@ const Home = ({ plans, tours, blogs }) => {
           </p>
         </span>
 
-        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-12 px-28 my-4 mb-16">
+        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-16 px-40 my-4 mb-16">
           {blogs.slice(blogsSliceStart, blogsSliceEnd).map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
