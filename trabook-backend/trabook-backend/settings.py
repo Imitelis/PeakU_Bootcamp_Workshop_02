@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-dcg_$0#-q4p#0uowah%x8oj=#acq2t5+lu^slb4&nm^jf5@82r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    'lively-darkness-2264.fly.dev',
+]
 
 
 # Application definition
@@ -139,5 +142,6 @@ REST_FRAMEWORK = {
 
 # Cors authorization
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    'http://localhost:3000',
+    'long-leaf-1490.fly.dev',
 ]

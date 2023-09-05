@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseUrl = "/api/tours";
+const apiUrl = process.env.REACT_APP_API_URL;
+const baseUrl = `${apiUrl}/api/tours`;
 
 const getAll = async () => {
   const request = axios.get(baseUrl);
