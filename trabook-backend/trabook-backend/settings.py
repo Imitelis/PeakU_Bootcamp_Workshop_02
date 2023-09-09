@@ -26,6 +26,8 @@ SECRET_KEY = 'django-insecure-dcg_$0#-q4p#0uowah%x8oj=#acq2t5+lu^slb4&nm^jf5@82r
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
     '0.0.0.0',
     'lively-darkness-2264.fly.dev',
 ]
@@ -142,6 +144,6 @@ REST_FRAMEWORK = {
 
 # Cors authorization
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'long-leaf-1490.fly.dev',
+    'http://localhost',
+    'https://long-leaf-1490.fly.dev',
 ]

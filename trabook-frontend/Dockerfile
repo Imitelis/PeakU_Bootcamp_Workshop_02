@@ -1,29 +1,21 @@
-# Use an official Node.js runtime as the base image
-FROM node:14 AS build
+# syntax = docker/dockerfile:1
 
-# Set the working directory in the container
+# Adjust NODE_VERSION as desired
+ARG NODE_VERSION=18.13.0
+FROM node:${NODE_VERSION}-slim as base
+
+LABEL fly_launch_runtime="Node.js"
+
+# Node.js app lives here
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
-
-# Install project dependencies
+# Install node modules
+COPY package.json .
 RUN npm install
 
-# Copy the rest of the application code to the container
-COPY build .
+# Copy application code
+COPY . .
 
-# Build the React app for production
-# RUN npm run build
-
-# Use an official Nginx runtime as the production server image
-FROM nginx:alpine
-
-# Copy the built React app from the build container to the Nginx server's HTML directory
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 3000
+# Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
-
-# Start the Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+CMD [ "npm", "run", "dev" ]
