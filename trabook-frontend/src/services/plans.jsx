@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiUrl = "localhost:8000";
-const baseUrl = `https://lively-darkness-2264.fly.dev/api/plans`;
+const apiUrl = import.meta.env.APP_API_URL;
+const baseUrl = `${apiUrl}/api/plans`;
 
 const getAll = async () => {
   const request = axios.get(baseUrl);

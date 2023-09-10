@@ -2,6 +2,12 @@
 
 ## Initialize project
 
+Move to the backend folder:
+
+```
+cd trabook-backend
+```
+
 Create a virtual environment for the backend:
 
 ```
@@ -21,12 +27,6 @@ pip install -r reqs.txt
 ```
 
 Then:
-
-```
-cd trabook-backend
-```
-
-and:
 
 ```
 python3 manage.py runserver
@@ -49,7 +49,7 @@ npm install
 and finally:
 
 ```
-npm run start
+npm run dev
 ```
 
 to run the client.

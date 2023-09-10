@@ -267,13 +267,13 @@ const Home = ({ plans, tours, blogs }) => {
           </p>
         </span>
 
-        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-8 px-60 my-4 mb-16">
+        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 gap-8 px-60 mt-4 mb-16">
           {plans.slice(plansSliceStart, plansSliceEnd).map((plan) => (
             <PlanCard key={plan.id} plan={plan} />
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-3 mt-4 mb-8">
+        <div className="flex items-center justify-center gap-3 mt-2 mb-8">
           <button
             className="text-md px-2 py-2 text-gray-400 border-2 border-gray-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 shadow-md rounded-full"
             onClick={handleLeftPlans}
@@ -479,13 +479,13 @@ const Home = ({ plans, tours, blogs }) => {
           </p>
         </span>
 
-        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 2xl:gap-16 lg:gap-12 px-40 my-4 mb-16">
+        <div className="grid 2xl:grid-cols-4 lg:grid-cols-2 2xl:gap-16 lg:gap-12 px-40 mt-4 mb-16">
           {blogs.slice(blogsSliceStart, blogsSliceEnd).map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-3 mt-4 mb-8">
+        <div className="flex items-center justify-center gap-3 mt-2 mb-8">
           <button
             className="px-2 py-2 bg-gray-100 border hover:bg-orange-500 hover:border-orange-500 rounded-full"
             onClick={handleLeftBlogs}
